@@ -31,15 +31,15 @@
       </div>
       <!-- 中间内容板块 -->
       <div class="product">
-       <!-- <mt-button type="primary" @click="show">default</mt-button>  对mint-ui的件引入-->
 
-       <router-view></router-view>
+        <transition >
+        
+         <router-view></router-view>
+
+        </transition>
       </div>
    
     </div>
-
-
-
 
 </template>
 
@@ -63,6 +63,23 @@ export default {
 <style lang="less">
 .app-component {
   padding: 40px 0 50px;
-  background-color: pink;
+  background-color: pink; 
+  overflow-x: hidden;
+  .product {
+    .v-enter
+     {
+       opacity: 0;
+      transform: translateX(100%)
+    }
+    .v-leave-to{
+      position: absolute;
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    .v-enter-active,
+    .v-leave-active{
+      transition: all 0.5s ease;
+    }
+  }
 }
 </style>
