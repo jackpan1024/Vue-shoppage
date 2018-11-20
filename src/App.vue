@@ -63,9 +63,11 @@ export default {
 <style lang="less">
 .app-component {
   padding: 40px 0 50px;
-  background-color: pink; 
+  // background-color: pink; 
   overflow-x: hidden;
   .product {
+    width: 100% ;
+    height: 100%;
     .v-enter
      {
        opacity: 0;
