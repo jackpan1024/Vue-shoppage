@@ -13,6 +13,8 @@ Vue.use(VueResource)
 // 阻止vue 启动的时候的默认提示功能
 Vue.config.productionTip = false
 
+// 注册全局的根路径
+Vue.http.options.root = "http://www.lovegf.cn:8899/"
 
 // 注册全局的过滤器
 Vue.filter("dataFormate",function(dataTime,time = "YYYY-MM-DD HH:mm:ss"){

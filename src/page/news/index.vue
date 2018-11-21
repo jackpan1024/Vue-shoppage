@@ -1,7 +1,7 @@
 <template>
    <!-- <h1> xinwen</h1> -->
    <div class="newsList">
-        <router-link to="newsInfo" v-for="item in newsList" :key="item.id">
+        <router-link :to="'/home/news/newIfon/'+item.id" v-for="item in newsList" :key="item.id">
             <img src="https://www.xp510.com/uploadfile/2018/0129/20180129092501876.jpg" alt="">
             <div class="count">
                 <h3>{{item.title}}</h3>
@@ -27,10 +27,10 @@
         },
         methods:{
             getNewsData(){
-                this.$http.get('http://www.lovegf.cn:8899/api/getnewslist').then(result =>{
+                this.$http.get('api/getnewslist').then(result =>{
                    if(result.body.status === 0 ){
                        this.newsList = result.body.message
-                       console.log(this.newsList)
+                    //    console.log(this.newsList)
                    }
                    else{
                        alert("信息获取失败")

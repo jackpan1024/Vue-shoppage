@@ -8,6 +8,8 @@ import memberComponent from "../page/memberPage"
 import shopComponent from "../page/shopPage"
 import searchComponent from "../page/searchPage"
 import newLIst from "../page/news"
+import newsInfo from "../page/newsInfo"
+import newsConment from "../suncomponent/conment.vue"
 
 Vue.use(Router)
 
@@ -18,7 +20,12 @@ export default new Router({
    {path:'/member',component:memberComponent},
    {path:'/shop',component:shopComponent},
    {path:'/search',component:searchComponent},
-   {path:'/home/news',component:newLIst}
+   {path:'/home/news',component:newLIst},
+   {path:'/home/news/newIfon/:id',component:{
+    newsInfo,
+    newsConment
+   }}
+
   ],
   linkActiveClass:"mui-active"
 })
