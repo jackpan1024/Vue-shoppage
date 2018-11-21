@@ -6,11 +6,18 @@ import app from "./App.vue"
 //导入接口的请求文件
 import VueResource from "vue-resource"
 
+import moment from "moment"
+
 // 注册接口请求
 Vue.use(VueResource)
 // 阻止vue 启动的时候的默认提示功能
 Vue.config.productionTip = false
 
+
+// 注册全局的过滤器
+Vue.filter("dataFormate",function(dataTime,time = "YYYY-MM-DD HH:mm:ss"){
+  return moment(dataTime).format(time)
+})
 // import MintUi from "mint-ui"
 
 // import "mint-ui/lib/style.css"
