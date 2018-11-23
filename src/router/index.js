@@ -9,7 +9,8 @@ import shopComponent from "../page/shopPage"
 import searchComponent from "../page/searchPage"
 import newLIst from "../page/news"
 import newsInfo from "../page/newsInfo"
-import newsConment from "../suncomponent/conment.vue"
+import photoListComponent from "../page/photoList"
+import photoInfoComponent from "../page/photoInfo"
 
 Vue.use(Router)
 
@@ -21,11 +22,9 @@ export default new Router({
    {path:'/shop',component:shopComponent},
    {path:'/search',component:searchComponent},
    {path:'/home/news',component:newLIst},
-   {path:'/home/news/newIfon/:id',component:{
-    newsInfo,
-    newsConment
-   }}
-
+   {path:'/home/news/newIfon/:id',component:newsInfo},
+   {path:'/home/pootoList',component:photoListComponent},
+   {path:'/home/pootoList/:id',component:photoInfoComponent}
   ],
   linkActiveClass:"mui-active"
 })

@@ -27,5 +27,12 @@
         }
       ]
     ]
+  ],
+
+  
+  "ignore": [
+    "./src/lib/mui/js/*.js"
   ]
+
+  
 }

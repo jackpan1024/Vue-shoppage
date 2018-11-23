@@ -11,11 +11,14 @@
             <hr>
             <div class="countend" v-html="item.content"></div>
         </div>
+         <!-- 占位标签 --> 
+        <conment :id="id"></conment>
     </div>
 
 </template>
 
 <script>
+import conment from "../../suncomponent/conment.vue"
 export default {
   data() {
     return {
@@ -34,9 +37,12 @@ export default {
           this.newsCuntend = result.body.message;
           // console.log(this.newsCuntend)
         }
-      });
+      })
     }
-  }
+  },
+   components:{
+            conment
+        }
 };
 </script>
 
@@ -57,6 +63,9 @@ export default {
   }
   .sumClick {
     float: right;
+  }
+  img {
+    width: 100% ;
   }
 }
 </style>

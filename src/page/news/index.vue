@@ -4,7 +4,7 @@
         <router-link :to="'/home/news/newIfon/'+item.id" v-for="item in newsList" :key="item.id">
             <img src="https://www.xp510.com/uploadfile/2018/0129/20180129092501876.jpg" alt="">
             <div class="count">
-                <h3>{{item.title}}</h3>
+                <h3 class="mint-header-title">{{item.title}}</h3>
                 <p>
                     <span class="time">发表时间：{{item.add_time | dataFormate}}</span>
                     <span class="tauch">点击: <i>{{item.click}}</i>次</span>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-
+    
     export default {
         data(){
             return{
@@ -37,7 +37,8 @@
                    }
                 })
             }
-        }
+        },
+       
     }
     
 </script>
@@ -54,14 +55,15 @@
         }
         .count {
            flex: 1;
+           padding-right: 20px;
            h3 {
             //    display: inline-block;
                font-size: 14px;
-               width: 100%;
+               width: 300px;
                color: #000;
-               white-space: nowrap;
-               overflow: hidden;
-               text-overflow: ellipsis;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
               
            }
            .time,.tauch {

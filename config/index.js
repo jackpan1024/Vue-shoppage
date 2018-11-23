@@ -13,7 +13,7 @@ module.exports = {
     proxyTable: {},
 
     // Various Dev Server settings
-    host: 'localhost', // can be overwritten by process.env.HOST// 设置电脑的IP 然后保证和手机在同一个局域网，然后在手机上访问这个该IP 就可以直接在手机上访问该页面的网站了
+    host: 'localhost', // can be overwritten by process.env.HOST// 设置电脑的IP 然后保证和手机在同一个局域网，然后在手机上访问这个该IP 就可以直接在手机上访问该页面的网站了  localhost 192.168.43.153
     port: 3000, // can be overwritten by process.env.PORT, if port is in use, a free one will be determined
     autoOpenBrowser: true, // 设置自动打开页面
     errorOverlay: true,

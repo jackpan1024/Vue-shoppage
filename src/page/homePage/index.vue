@@ -17,38 +17,36 @@
 		              <p>新闻资讯</p>
                   </router-link>
                 </li>
-                <!-- <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/home/news">
+                <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
+                  <router-link to="/home/pootoList">
 		             <img src="../../img/menu2.png" alt="">
 		              <p>图片分享</p>
                   </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/home/news">
-		             <img src="../../img/menu1.png" alt="">
-		              <p>新闻资讯</p>
+                  <router-link to="/">
+		             <img src="../../img/menu3.png" alt="">
+		              <p>商品购买</p>
                   </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/home/news">
-		             <img src="../../img/menu1.png" alt="">
-		              <p>新闻资讯</p>
+                  <router-link to="/">
+		             <img src="../../img/menu4.png" alt="">
+		              <p>留言反馈</p>
                   </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/home/news">
-		             <img src="../../img/menu1.png" alt="">
-		              <p>新闻资讯</p>
+                  <router-link to="/">
+		             <img src="../../img/menu5.png" alt="">
+		              <p>视频专区</p>
                   </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/home/news">
-		             <img src="../../img/menu1.png" alt="">
-		              <p>新闻资讯</p>
+                  <router-link to="/">
+		             <img src="../../img/menu6.png" alt="">
+		              <p>练习我们</p>
                   </router-link>
                 </li>
-		             -->
-		           
 		        </ul> 
     </div>
    </div>
