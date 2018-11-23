@@ -11,6 +11,8 @@ import newLIst from "../page/news"
 import newsInfo from "../page/newsInfo"
 import photoListComponent from "../page/photoList"
 import photoInfoComponent from "../page/photoInfo"
+import productListComponent from "../page/productList"
+import productDetailsComponent from "../page/productDetails"
 
 Vue.use(Router)
 
@@ -23,8 +25,10 @@ export default new Router({
    {path:'/search',component:searchComponent},
    {path:'/home/news',component:newLIst},
    {path:'/home/news/newIfon/:id',component:newsInfo},
-   {path:'/home/pootoList',component:photoListComponent},
-   {path:'/home/pootoList/:id',component:photoInfoComponent}
+   {path:'/home/photoList',component:photoListComponent},
+   {path:'/home/photoList/:id',component:photoInfoComponent},
+   {path:'/home/productList',component:productListComponent},
+   {path:'/home/productList/:id',component:productDetailsComponent}
   ],
   linkActiveClass:"mui-active"
 })

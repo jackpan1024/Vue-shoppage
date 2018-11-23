@@ -24,7 +24,7 @@
                   </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/">
+                  <router-link to="/home/productList">
 		             <img src="../../img/menu3.png" alt="">
 		              <p>商品购买</p>
                   </router-link>
