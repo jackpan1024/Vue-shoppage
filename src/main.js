@@ -8,6 +8,7 @@ import VueResource from "vue-resource"
 
 import moment from "moment"
 
+
 // import $ from "jquery"
 
 
@@ -59,7 +60,7 @@ import "./lib/mui/css/icons-extra.css"
 
 // 导入路由模板
 import router from "./router/"
-
+import store from "./vuex/"
 
 // 导入公共样式模块
 
@@ -71,5 +72,6 @@ let vm = new Vue({
   el:'#app',
   render:c=>c(app),
   router,
+  store
   
 })

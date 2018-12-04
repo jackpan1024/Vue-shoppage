@@ -13,6 +13,8 @@ import photoListComponent from "../page/photoList"
 import photoInfoComponent from "../page/photoInfo"
 import productListComponent from "../page/productList"
 import productDetailsComponent from "../page/productDetails"
+import producTintroduceComponent from "../page/producTintroduce"
+import productCommentComponent from "../page/productComment"
 
 Vue.use(Router)
 
@@ -28,7 +30,9 @@ export default new Router({
    {path:'/home/photoList',component:photoListComponent},
    {path:'/home/photoList/:id',component:photoInfoComponent},
    {path:'/home/productList',component:productListComponent},
-   {path:'/home/productList/:id',component:productDetailsComponent}
+   {path:'/home/productList/:id',component:productDetailsComponent},
+   {path:'/home/productList/producTintroduce/:id',component:producTintroduceComponent,name:"producTintroduce"},
+   {path:'/home/productList/productComment/:id',component:productCommentComponent},
   ],
   linkActiveClass:"mui-active"
 })

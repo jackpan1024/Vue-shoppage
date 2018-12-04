@@ -5,7 +5,7 @@
       <div class="header">
         <!-- <mt-header type="defaul" fixed title="vue test"></mt-header>  -->
         <mt-header class="zIndex" fixed title="vue test vue testvue testvue testvue testvue test">
-          <span slot="left" v-show="flag" @click="goBack">
+          <span slot="left" v-show="flagBack" @click="goBack">
             <mt-button icon="back">返回</mt-button>
           </span>
          
@@ -15,20 +15,20 @@
       <!-- 底部板块 -->
        <div class="tapbar">
         <nav class="mui-bar mui-bar-tab">
-        <router-link class="mui-tap-item-c" to="/home">
+        <router-link class="mui-tab-item-llb" to="/home">
           <span class="mui-icon mui-icon-home"></span>
           <span class="mui-tab-label">首页</span>
         </router-link>
-          <router-link class="mui-tap-item-c" to="/member">
+          <router-link class="mui-tab-item-llb" to="/member">
           <span class="mui-icon mui-icon-contact"></span>
           <span class="mui-tab-label">会员</span>
         </router-link>
-        <router-link class="mui-tap-item-c" to="/shop">
-          <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge">0</span></span>
+        <router-link class="mui-tab-item-llb" to="/shop">
+          <span class="mui-icon mui-icon-extra mui-icon-extra-cart"><span class="mui-badge" id="badge">{{$store.getters.getAllData}}</span></span>
           <span class="mui-tab-label">购物车</span>
         </router-link>
       
-        <router-link class="mui-tap-item-c" to="/search">
+        <router-link class="mui-tab-item-llb" to="/search">
           <span class="mui-icon mui-icon-search"></span>
           <span class="mui-tab-label">搜索</span>
         </router-link>
@@ -56,39 +56,41 @@ export default {
   data() {
     return {
       msg: "点击显示隐藏框",
-      flag:true
+      flagBack:true,
+      num:""
     };
   },
   created(){
-    if(this.$route.path == "/home"){
-        this.flag = false
-      }
+   
+    if(this.$route.path === "/home" ){
+      this.flagBack = false;
+    }else{
+      this.flagBack = true
+    }
+     
   },
    
   methods: {
 
     // 返回上一级
     goBack(){
-      if(this.$route.path == "/home"){
-        this.flag= false
-      }else {
-        this.$router.go(-1)
+      if(this.$route.path !== "/home"){
+         this.$router.go(-1)
       }
       
     }
   },
   watch: {
-      '$route.path': (to)=>{
-        // console.log(to)
-        
-        if(to == "/home"){
-           this.flag =false
-        }else{
-          this.flag = true
+    // 这里用箭头函数就不可以
+      '$route.path': function(to){
+       
+        if(to === "/home"){
+           this.flagBack = false
+        }else {
+          this.flagBack = true
         }
       }
     }
- 
 };
 </script>
 
@@ -120,40 +122,35 @@ export default {
       transition: all 0.5s ease;
     }
   }
-  .mui-bar-tab .mui-tap-item-c {
-    display: table-cell;
-    overflow: hidden;
-    width: 1%;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #929292;
+.mui-bar-tab .mui-tab-item-llb.mui-active {
+  color: #007aff;
 }
-.mui-bar-tab .mui-tap-item-c {
-    display: table-cell;
-    overflow: hidden;
-    width: 1%;
-    height: 50px;
-    text-align: center;
-    vertical-align: middle;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    color: #929292;
+
+.mui-bar-tab .mui-tab-item-llb {
+  display: table-cell;
+  overflow: hidden;
+  width: 1%;
+  height: 50px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #929292;
 }
-.mui-bar-tab .mui-tap-item-c .mui-icon {
-    top: 3px;
-    width: 24px;
-    height: 24px;
-    padding-top: 0;
-    padding-bottom: 0;
+
+.mui-bar-tab .mui-tab-item-llb .mui-icon {
+  top: 3px;
+  width: 24px;
+  height: 24px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
-.mui-bar-tab .mui-tap-item-c .mui-icon ~ .mui-tab-label {
-    font-size: 11px;
-    display: block;
-    overflow: hidden;
-    text-overflow: ellipsis;
+
+.mui-bar-tab .mui-tab-item-llb .mui-icon ~ .mui-tab-label {
+  font-size: 11px;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
    <div>
-    <div class="banner">
+    <!-- <div class="banner">
        <mt-swipe :auto="4000" class="banner-list">
             <mt-swipe-item v-for="(item, index) in bannerList" :key="index">
                 <a :href="item.url">
@@ -8,7 +8,8 @@
                 </a>
             </mt-swipe-item>
         </mt-swipe> 
-    </div>
+    </div> -->
+      <banner :bannerList="bannerList"></banner>
     <div class="title">
         <ul class="mui-table-view mui-grid-view mui-grid-9">
 		            <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
@@ -18,7 +19,7 @@
                   </router-link>
                 </li>
                 <li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-                  <router-link to="/home/pootoList">
+                  <router-link to="/home/photoList">
 		             <img src="../../img/menu2.png" alt="">
 		              <p>图片分享</p>
                   </router-link>
@@ -54,9 +55,11 @@
 <script>
 // 插件  提示的功能
 import { Toast } from "mint-ui";
+import banner from "../../suncomponent/banner.vue"
 export default {
   data() {
     return {
+      
       bannerList: []
     };
   },
@@ -75,30 +78,33 @@ export default {
         }
       });
     }
+  },
+  components:{
+    banner
   }
 };
 </script>
 <style lang="less">
-.banner {
-  .banner-list {
-    width: 100%;
-    height: 200px;
-    .mint-swipe-item {
-      &:nth-child(1) {
-        background-color: blue;
-      }
-      &:nth-child(2) {
-        background-color: #ccc;
-      }
-      &:nth-child(3) {
-        background-color: skyblue;
-      }
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
+// .banner {
+//   .banner-list {
+//     width: 100%;
+//     height: 200px;
+//     .mint-swipe-item {
+//       &:nth-child(1) {
+//         background-color: blue;
+//       }
+//       &:nth-child(2) {
+//         background-color: #ccc;
+//       }
+//       &:nth-child(3) {
+//         background-color: skyblue;
+//       }
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
 
 .title {
   .mui-grid-view.mui-grid-9 {
