@@ -44,17 +44,18 @@ Vue.filter("dataFormate",function(dataTime,time = "YYYY-MM-DD HH:mm:ss"){
 
 
 // 按需导入   在导入的时候是需要先下载 babel-plugin-babelrc 的包 然后再按照官方文档配置相关的文件
-import { Header,Button,Swipe, SwipeItem,Lazyload } from 'mint-ui';
+import { Header,Button,Swipe, SwipeItem,Lazyload,Switch} from 'mint-ui';
 Vue.component(Header.name, Header);
 Vue.component(Button.name, Button);
 Vue.component(Swipe.name, Swipe);
 Vue.component(SwipeItem.name, SwipeItem);
 Vue.use(Lazyload);
+Vue.component(Switch.name, Switch);
 
  // 在同一个项目中是可以同时使用多个框架老构建项目的
  //使用mui 专业的手机移动端布局  因为mui没有npm  所以直接下载包 然后导入包
  import "./lib/mui/css/mui.css"
-//  import "./lib/mui/js/mui.js"
+ import "./lib/mui/js/mui.js"
 import "./lib/mui/css/icons-extra.css"
 
 

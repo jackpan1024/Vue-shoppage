@@ -3,7 +3,6 @@
         <h4>评论列表</h4>
         <textarea class="txt" placeholder="请输入评论的内容(最多不超过120个字)" v-model="postcomment"></textarea>
         <mt-button size="large" type="danger" @click="addComment">发表评论</mt-button>
-
         <div class="user-comment" v-for="(item, index) in usercomment" :key="index">
                 <p class="title">
                     <span>第{{index+1}}楼</span>
@@ -39,7 +38,7 @@ export default {
                if(result.body.status === 0 ){
                    this.usercomment = this.usercomment.concat(result.body.message) 
                }
-            //    console.log(this.usercomment)
+            
            })
        },
        addComment(){
